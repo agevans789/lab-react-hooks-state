@@ -19,6 +19,7 @@ const App = () => {
       </p>
 
       {/* TODO: Render DarkModeToggle and implement dark mode functionality */}
+      <DarkModeToggle/>
 
       {/* TODO: Implement category filter dropdown */}
       <label>Filter by Category: </label>
@@ -33,6 +34,6 @@ const App = () => {
       {/* TODO: Implement and render Cart component */}
     </div>
   )
-}
+};
 
 export default App
