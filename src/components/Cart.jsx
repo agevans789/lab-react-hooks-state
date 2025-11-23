@@ -1,14 +1,16 @@
-import React from 'react'
+import react from 'react';
+import ProductCard from './ProductCard';
+import { useState } from 'react';
 
-const Cart = () => {
-  return (
-    <div>
-      <h2>Shopping Cart</h2>
-      <ul>
-        {/* TODO: Include items here in li tags with text 'ITEM.NAME is in your cart.' */}
-      </ul>
-    </div>
-  )
-}
+const Cart = ({products, onAddToCart}) => {
+    return (
+        <div>
+            <h2>Shopping Cart</h2>
+            {products.map((product) => (
+                <ProductCard key={product.id} product={product} onAddToCart={onAddToCart}/>
+            ))}
+        </div>
+    );
+};
 
-export default Cart
+export default Cart;
