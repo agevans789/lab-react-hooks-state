@@ -9,6 +9,9 @@ export const sampleProducts = [
 ];
 
 const ProductList = ({products, onAddToCart, onFilter}) => {
+  if (!products || products.length === 0) {
+    return <div>No products available.</div>;
+  }
   return (
     <div className='ProductList'>
       <h2>Available Products</h2>
